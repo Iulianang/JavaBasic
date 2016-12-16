@@ -10,7 +10,6 @@ import java.util.Scanner;
 public class PedirNota {
 	
 	
-	
 	public static int pedirNota ()
 	{
 		
@@ -35,6 +34,7 @@ public class PedirNota {
 	   }while (notaIntroducida <5);
 	   
 	   System.out.println("Aprobado");
+	   
 }
 
 }

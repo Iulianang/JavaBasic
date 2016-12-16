@@ -9,6 +9,36 @@ import java.util.Scanner;
  */
 public class PedirNotaBoolean {
 	
+	private static boolean aprobado (int nota)
+	{
+		return (nota>=5);
+	}
+	
+	private static void imprimeNotaAlfabetica(int nota_numerica)
+	{
+		switch (nota_numerica) {
+		case 10:
+			System.out.println("MATRICULA");
+			break;
+		case 9:
+			System.out.println("SOBRESALIENTE");
+			break;
+		case 8:
+		case 7:
+			System.out.println("NOTABLE");
+		case 6:
+			System.out.println("BIEN");
+			break;
+		case 5:
+			System.out.println("SUFICIENTE");
+			break;
+		default:
+			System.out.println("INSUFICIENTE");
+			break;
+		}
+	}
+	
+	
 	
 	public static boolean suspenso (int nota)
 	{
@@ -52,6 +82,7 @@ public class PedirNotaBoolean {
 	   }while (suspenso(notaIntroducida));
 	   
 	   System.out.println("Aprobado");
+	   imprimeNotaAlfabetica(notaIntroducida);
 }
 
 }
