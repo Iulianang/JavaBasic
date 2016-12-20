@@ -14,7 +14,7 @@ public class NumerosPares2 {
 
 		int num_veces = pedirCantidadPares();
 
-		for (int i = 0; i <= 100; i++) {
+		for (int i = 0; i < 100; i++) {
 			resto = i % 2;
 
 			if ((resto == 0) && (num_veces_imprimo < num_veces)) {

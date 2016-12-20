@@ -17,15 +17,15 @@ public class EjBoolean {
 	
 	public static boolean esPar (int numero)
 	{
-		boolean bul = false;
+		boolean bul = false; //se define como false por convencion
 		
-		if (numero%2 == 0)
+		if ((numero%2) == 0) //ultilizacion de varios parentesis para definir prioridad de los operadores
 		{
 			bul = true;
 		}	else
 			{
-				bul = false;
-			}
+				bul = false; //else es redundante
+			} 
 		
 		
 		return bul;

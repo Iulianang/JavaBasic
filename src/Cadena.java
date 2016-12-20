@@ -14,4 +14,5 @@ public class Cadena {
 				System.out.println("La palabra "+i+" es " + argumentos[i]);
 		}
 	}
+	
 }
