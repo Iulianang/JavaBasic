@@ -21,7 +21,7 @@ public class CesarMejorado {
 		
 			for(int pos=0; pos<longi; pos++){
 				caracter_actual = palabra.charAt(pos);
-				
+				 
 				
 			}
 		return palabra_cifrada;
