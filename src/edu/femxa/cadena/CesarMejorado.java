@@ -7,13 +7,9 @@ public class CesarMejorado {
 		cesar = new ResueltoCesar();
 		String resultado = cesar.cifradoCesar("La lista de la compra es", 3);
 		System.out.println(resultado);
-//			for (int toni=0; toni<pos; pos++)
-//			{
-//				palabra = 
-//			
-//			}
+
 	}
-	// TODO
+	
 	public String cifradoCesar (String palabra, int clave)
 	{
 		int longi = palabra.length();
