@@ -10,6 +10,7 @@ public class Principal {
 		int x = (int) (100*Math.random()+1);
 		int contador = 0;	
 		boolean correcto = false;
+		int constante = 5;
 		
 		do 
 		{
@@ -30,9 +31,9 @@ public class Principal {
 						}
 			
 			contador++;
-			}while (contador<5 && !correcto); 
+			}while (contador<constante && !correcto); 
 			
-				if (contador == 5 && !correcto)
+				if (contador == constante && !correcto)
 				{
 					System.out.println("Ha gastado todos sus intentos, looser");
 				}
