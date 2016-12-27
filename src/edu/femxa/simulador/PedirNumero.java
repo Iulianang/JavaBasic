@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class PedirNumero {
 	
 	
-	public static int pedirNumero ()
+	public int pedirNumero ()
 	{
 		int pedirNumero = 0;
 		Scanner scanner = null;
