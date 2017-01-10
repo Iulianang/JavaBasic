@@ -17,23 +17,25 @@ public class Palindromo {
 			
 			esPalindromo(palabra);
 		
-		
 	}
-		
-		public static boolean esPalindromo (String palabra)
+		/*
+		 * metodo para comparar palabras e indicar si son palindromo mediante un while
+		 * donde se recorre la palabra y se compara con un if cada letra
+		 */
+		public static boolean esPalindromo (String cadena)
 		{
 			int inicio = 0;
-			int fin = (palabra.length()-1);
+			int fin = (cadena.length()-1);
 			Boolean palindromo = false;
+			
 			while((inicio<fin)&&(!palindromo))
 			{
-				if(palabra.charAt(inicio) == palabra.charAt(fin))
+				if(cadena.charAt(inicio) == cadena.charAt(fin))
 				{
 					inicio++;
 					fin--;
 					
-				}else
-					palindromo = true;
+				}else palindromo = true;
 					
 			}
 		if(!palindromo)

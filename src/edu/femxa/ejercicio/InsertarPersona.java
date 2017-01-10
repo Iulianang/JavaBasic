@@ -25,9 +25,6 @@ public class InsertarPersona {
 			persona_aux =new Persona(nombre_aux,edad_aux);
 			listaPersona[j] = persona_aux;
 		}
-		
 		return listaPersona;
 	}
-
-	
 }
