@@ -4,32 +4,33 @@ import java.util.Scanner;
 
 public class Main {
 
-	public Main() {
+	public static void main(String[] args) {
+		
+		System.out.println("Introducir una frase:");
 		String frase = null;
 		String sFrase = null;
 		Scanner scan = null;
 			scan = new Scanner(System.in);
-			frase = scan.next();
-			
+			frase = scan.nextLine();
+		
 		sFrase = sinEspacio(frase);
 		
-		System.out.println("Frase originar: " + frase);
-		System.out.println("Frase sin espacios: "+ sFrase);
+		System.out.println("Frase sin espacios:"+ sFrase);
 	}
 	
 	
-	public String sinEspacio (String normal)
+	public static String sinEspacio (String normal)
 	{
-		String sEspacio = null;
+		String sEspacio = "";
 		char aux = 0;
 			for (int i = 0; i < normal.length(); i++) 
 			{
 				aux = normal.charAt(i);
 				
 				if(aux != ' ')
-					
-					sEspacio= sEspacio + aux;
-					
+				{
+					sEspacio = sEspacio + aux;
+				}
 			}
 		
 		return sEspacio;
