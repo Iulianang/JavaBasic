@@ -18,6 +18,11 @@ public class Main {
 		System.out.println("Frase sin espacios:"+ sFrase);
 	}
 	
+	/**
+	 * metodo que recorre un string caracter por caracter
+	 * @param normal 
+	 * @return un string donde los espacios entre palabras ha sido omitido
+	 */
 	
 	public static String sinEspacio (String normal)
 	{
