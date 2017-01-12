@@ -8,15 +8,18 @@ public class FicherosOcultos {
 		
 		File fichero = null;
 		fichero = new File("ficheros");
+			File lista[] = fichero.listFiles();
 			
-			boolean oculto = false;
-//			boolean oculto = fichero.isHidden();
-			
-			
-			if(oculto)
-			{
-				System.out.println("Los archivos ocultos del directorio son: "+ oculto);
-			}
-			
-}
+	        for (int i = 0; i < lista.length; i++) 
+	        {
+	      	  if(lista[i].isHidden())
+	      	  {
+	      		  System.out.println(lista[i].getAbsolutePath());
+	      	  }else
+	      	  {
+	      		  System.out.println("No encontrado");
+	      	  }
+	        }
+		
+	}		
 }
