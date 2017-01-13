@@ -11,10 +11,9 @@ public class CrearFichero {
 		scan = new Scanner(System.in);
 		System.out.println("Introduzca el numero del fichero a crear: ");
 			String nombre = scan.nextLine();
-		
 		crear(nombre);
 		System.out.println("Introduzca el nombre del fichero a borrar: ");
-		String nombre2 = scan.nextLine();
+			String nombre2 = scan.nextLine();
 		borrar(nombre2);
 		
 	}
@@ -36,7 +35,6 @@ public class CrearFichero {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
 		
 	}
 	public static void borrar (String cad)
