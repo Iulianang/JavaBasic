@@ -14,6 +14,18 @@ public class ArraySuma {
 			 * la media será real (float)
 			 * 
 			 */
+			int[] notas = new ArraySuma().array_notas;
+			int notas_longitud = notas.length;
+			float nota_media = 0;
+			float media = 0;
+			
+				for(int i = 0;i<notas_longitud;i++){
+					media = media + notas[i];
+					
+				}
+				
+				nota_media = media / notas_longitud;
+				System.out.println(nota_media);
 		}
 
 	}
