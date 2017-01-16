@@ -1,5 +1,9 @@
 package edu.femxa.ficheros;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+
 /**
  * Haced el cuerpo de los métodos
  * y un pequeño main para probarse
@@ -50,7 +54,7 @@ public class Codificar {
 	}
 
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws FileNotFoundException {
 		
 		String mensaje = "Esto es un mensaje cifrado";
 		
@@ -59,7 +63,7 @@ public class Codificar {
 		
 		mensaje = decodifica(mensaje);
 		System.out.println(mensaje);
-		
+ 		
 	}
 }
 

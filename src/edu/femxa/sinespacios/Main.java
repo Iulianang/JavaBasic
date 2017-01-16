@@ -1,10 +1,13 @@
 package edu.femxa.sinespacios;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.util.Scanner;
 
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws FileNotFoundException {
 		
 		System.out.println("Introducir una frase:");
 		String frase = null;
@@ -16,6 +19,9 @@ public class Main {
 		sFrase = sinEspacio(frase);
 		
 		System.out.println("Frase sin espacios:"+ sFrase);
+		
+		File fichero = new File ("ficheros\\archivo1");
+		FileReader leerFichero = new FileReader(fichero);
 	}
 	
 	/**
