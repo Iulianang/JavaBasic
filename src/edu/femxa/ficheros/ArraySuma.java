@@ -21,11 +21,10 @@ public class ArraySuma {
 			
 				for(int i = 0;i<notas_longitud;i++){
 					media = media + notas[i];
-					
 				}
 				
 				nota_media = media / notas_longitud;
-				System.out.println(nota_media);
+				System.out.println("La nota media de la clase es: "+nota_media);
 		}
 
 	}

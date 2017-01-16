@@ -1,11 +1,5 @@
 package edu.femxa.ficheros;
 
-import java.util.Scanner;
-
-import javax.print.DocFlavor.CHAR_ARRAY;
-
-import sun.security.krb5.internal.crypto.DesCbcCrcEType;
-
 /**
  * Haced el cuerpo de los métodos
  * y un pequeño main para probarse
@@ -20,23 +14,24 @@ import sun.security.krb5.internal.crypto.DesCbcCrcEType;
  * @author Administrador
  *
  */
+
 public class Codificar {
 	
+	public static final int CODIFICACION=3;
 	public static String codifica (String cadena)
 	{
-		String cadena_cifrada = "";
+		String mensaje_cifrado = "";
 			int num_aux= 0;
 			char caracter_aux= 0;
 			
 			for (int pos = 0; pos < cadena.length(); pos++) 
 			{
-				
 				num_aux= (int) cadena.charAt(pos);
-				caracter_aux = (char) (num_aux+3);
-				cadena_cifrada= cadena_cifrada+ caracter_aux;
+				caracter_aux = (char) (num_aux+CODIFICACION);
+				mensaje_cifrado= mensaje_cifrado+ caracter_aux;
 			}
 		
-		return cadena_cifrada;
+		return mensaje_cifrado;
 	}
 	
 	public static String decodifica (String cadena)
@@ -47,9 +42,8 @@ public class Codificar {
 		
 		for (int pos = 0; pos < cadena.length(); pos++) 
 		{
-			
 			num_aux= (int) cadena.charAt(pos);
-			caracter_aux = (char) (num_aux-3);
+			caracter_aux = (char) (num_aux-CODIFICACION);
 			mensaje_descifrado= mensaje_descifrado+ caracter_aux;
 		}
 			return mensaje_descifrado;
@@ -59,7 +53,6 @@ public class Codificar {
 	public static void main(String[] args) {
 		
 		String mensaje = "Esto es un mensaje cifrado";
-		int codigo = 3;
 		
 		mensaje = codifica(mensaje);
 		System.out.println(mensaje);
