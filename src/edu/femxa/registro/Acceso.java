@@ -6,23 +6,29 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
 
+import com.sun.org.apache.xpath.internal.operations.Equals;
+
 public class Acceso {
 
 	public static void leerNombre(String nombre) throws IOException {
 		
 		File fichero = new File ("nombre_usuario");
 		FileReader leerFichero = new FileReader(fichero);
-		Scanner scan = null;
+			BufferedReader br = new BufferedReader(leerFichero);
+			String linea = br.readLine();
+			Scanner scan = null;
 			scan = new Scanner (System.in);
-			System.out.println("Introduzca su nombre de usuario: ");
-			nombre = scan.nextLine();
-			if (nombre.equals(GestionFicheros.nombre_usuario(nombre)))
+			System.out.print("Introduzca su nombre de acceso: ");
+			String nombre_acceso = scan.nextLine();
+			
+			if (linea.equals(nombre_acceso))
 				{
 					System.out.println("Nombre correcto.");
 				}else
 				{
 					System.out.println("Error pruebe de nuevo.");
 				}
+		br.close();
 		leerFichero.close();
 	}
 	
@@ -30,19 +36,32 @@ public class Acceso {
 		
 		File fichero = new File ("contraseña");
 		FileReader leerFichero = new FileReader(fichero);
-		Scanner scan = null;
+			Scanner scan = null;
 			scan = new Scanner (System.in);
-			System.out.println("Introduzca su nombre de usuario: ");
-			contraseña = scan.nextLine();
-			String contraseña_cifrada = GestionFicheros.codifica(contraseña);
+			System.out.print("Introduzca su contraseña: ");
+			BufferedReader br = new BufferedReader(leerFichero);
+			String linea = br.readLine();
+				String contraseña_acceso = scan.nextLine();
 				
-			if (contraseña.equals(contraseña_cifrada))
-			{
-				System.out.println("Contraseña correcta.");
-			}else
-			{
-				System.out.println("Error pruebe de nuevo.");
-			}
+				boolean ok = false;
+				int contador = 0;
+				while(!ok && contador !=2)
+				{
+					String contraseña_cifrada = GestionFicheros.codifica(contraseña_acceso);
+					if(linea.equals(contraseña_cifrada))
+					{
+						System.out.println("Contraseña correcta.");
+						ok = true;
+					}else
+					{
+						System.out.println("Error pruebe de nuevo.");
+						contraseña_acceso = scan.nextLine();
+						contador++;
+					}
+				
+				}
+				
+		br.close();
 		leerFichero.close();
 	
 	}

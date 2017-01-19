@@ -25,17 +25,17 @@ public class GestionFicheros {
 			
 	}
 	
-	public static String contraseña (String contraseña) throws IOException 
+	public static String contraseña_usuario (String contraseña) throws IOException 
 	{
 		File fichero = new File("contraseña");
 		FileWriter escribirFichero  = new FileWriter (fichero);
-		BufferedWriter bw=new BufferedWriter(escribirFichero);
+			BufferedWriter bw=new BufferedWriter(escribirFichero);
 			
-			new Registro();
 			String contraseña_recibida = Registro.rContraseña(contraseña);
 			String contraseña_cifrada = codifica(contraseña_recibida);
 			bw.write(contraseña_cifrada);
-
+			bw.close();
+			escribirFichero.close();
 		return contraseña_cifrada;
 	}
 	
